@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../snowpack-vue-api">
+      <excludeFolder url="file://$MODULE_DIR$/../snowpack-vue-api/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../snowpack-vue-api/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../snowpack-vue-api/temp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
