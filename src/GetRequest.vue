@@ -19,7 +19,7 @@ export default {
   },
   created() {
     // Simple GET request using fetch
-    fetch('http://127.0.0.1:8888/api/person/search/a', {mode: 'cors'})
+    fetch('http://127.0.0.1:8000/api/person/search/a', {mode: 'cors'})
         .then(response => response.json())
         .then(data => (this.persons = data.data))
         .catch(error => (console.log('Request failed', error)));
@@ -29,6 +29,6 @@ export default {
 
 <style>
   ul {
-    background-color:cadetblue;
+    background-color:pink;
   }
 </style>
