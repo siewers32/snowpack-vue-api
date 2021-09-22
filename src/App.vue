@@ -1,47 +1,37 @@
 <template>
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 offset-sm-3">
-            <!-- <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>-->
-            <router-view></router-view>
-          </div>
-        </div>
-      </div>
-    </div>
-  <h3 class="p-3 text-center">Personen ophalen uit API</h3>
-  <get-request/>
+  <header>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/register">Register</router-link>
+      <router-link to="/login">Login</router-link>
+      <router-link to="/test">Test</router-link>
+    </nav>
+  </header>
+  <main>
+    <router-view/>
+  </main>
+
 </template>
 
 <script>
-import GetRequest from "./GetRequest";
-import { mapState, mapActions } from 'vuex';
+  import GetRequest from "./components/GetRequest";
+  export default {
+    name: "app",
 
-export default {
-  name: "app",
-  components: {
-    GetRequest,
-  },
-  computed: {
-    ...mapState({
-      alert: state => state.alert
-    })
-  },
-  methods: {
-    ...mapActions({
-      clearAlert: 'alert/clear'
-    })
-  },
-  watch: {
-    $route (to, from){
-      // clear alert on location change
-      this.clearAlert();
-    }
-  }
-
-};
+}
 </script>
 
+<style>
+main {
+  background-color: yellow;
+  width:80%;
+  margin:auto;
+  min-height:200px;
+}
+nav {
+  background-color: palegreen;
+}
+</style>
 
 
 
