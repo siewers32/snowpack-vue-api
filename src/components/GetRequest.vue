@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "get-request",
   data() {
@@ -18,13 +19,12 @@ export default {
     };
   },
   created() {
-    // Simple GET request using fetch
-    fetch('http://127.0.0.1:8888/api/person/search/a', {mode: 'cors'})
-        .then(response => response.json())
-        .then(data => (this.persons = data.data))
-        .catch(error => (console.log('Request failed', error)));
-  }
+    axios
+        .get('http://127.0.0.1:8000/api/person/search/a')
+        .then(response => (this.persons = response.data.data))
+  },
 };
+
 </script>
 
 <style>

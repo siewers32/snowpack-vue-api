@@ -1,35 +1,41 @@
+..src/views/Login.vue
+
 <template>
-  <h1>Hello from login {{ test }}</h1>
-  <form action="/" method="post">
-    <label for="first_name">Voornaam</label>
-    <input type="text" id="first_name" name="first_name">
-    <label for="last_name">Achternaam</label>
-    <input type="text" id="last_name" name="last_name">
-    <input type="submit">
-  </form>
+  <div>
+    <h1>Login</h1>
+    <form @submit.prevent="login">
+      <input type="email" name="email" v-model="email">
+      <input type="password" name="password" v-model="password">
+      <button type="submit">Login</button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      test: "World"
+      email: '',
+      password: ''
+    }
+  },
+/*
+  methods: {
+    login () {
+      this.$store
+          .dispatch('login', {
+            email: this.email,
+            password: this.password
+          })
+          .then(() => {
+            this.$router.push({ name: 'Test' })
+          })
+          .catch(err => {
+            console.log(err)
+          })
     }
   }
+
+ */
 }
 </script>
-
-<style>
-h1 {
-  color:blue;
-}
-
-label {
-  display:block;
-}
-
-input[type="submit"] {
-  display:block;
-  margin-top:20px;
-}
-</style>
