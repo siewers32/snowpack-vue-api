@@ -4,6 +4,12 @@ import router from './router'
 import axios from 'axios';
 import VueAxios from 'vue-axios'
 import { createStore } from 'vuex'
+import auth from './store/modules/auth';
+
+// Setup Axios
+//axios.defaults.withCredentials = true
+axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+
 
 // Create a new store instance.
 const store = createStore({
@@ -16,6 +22,9 @@ const store = createStore({
     increment (state) {
       state.count++
     }
+  },
+  modules: {
+    auth
   }
 })
 

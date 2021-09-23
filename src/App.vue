@@ -1,11 +1,6 @@
 <template>
   <header>
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/register">Register</router-link>
-      <router-link to="/login">Login</router-link>
-      <router-link to="/test">Test</router-link>
-    </nav>
+    <nav-bar/>
   </header>
   <main>
     <router-view/>
@@ -14,10 +9,12 @@
 </template>
 
 <script>
-  import GetRequest from "./components/GetRequest";
+import NavBar from "./components/NavBar";
   export default {
     name: "app",
-
+    components: {
+      NavBar
+    }
 }
 </script>
 
