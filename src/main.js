@@ -4,7 +4,6 @@ import router from './router'
 import axios from 'axios';
 import VueAxios from 'vue-axios'
 import { createStore } from 'vuex'
-import auth from './store/modules/auth';
 
 // Setup Axios
 //axios.defaults.withCredentials = true
@@ -55,8 +54,8 @@ const store = createStore({
     },
 
     modules: {
-    auth
-  }
+
+    }
 })
 
 const app = createApp(App);
