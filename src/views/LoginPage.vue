@@ -1,5 +1,3 @@
-..src/views/Login.vue
-
 <template>
   <div>
     <h1>Login</h1>
@@ -19,9 +17,10 @@ export default {
       password: ''
     }
   },
-/*
+
   methods: {
     login () {
+      console.log('test');
       this.$store
           .dispatch('login', {
             email: this.email,
@@ -35,7 +34,5 @@ export default {
           })
     }
   }
-
- */
 }
 </script>
