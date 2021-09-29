@@ -6,13 +6,11 @@ import axios from 'axios';
 import VueAxios from 'vue-axios'
 
 // Setup Axios
-// axios.defaults.withCredentials = true
+axios.defaults.withCredentials = true
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
 
 const app = createApp(App)
 app.use(VueAxios, axios).use(router).use(store)
-
-
 app.mount('#app')
 
 

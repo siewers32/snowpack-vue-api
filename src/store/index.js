@@ -4,7 +4,7 @@ import {createStore} from 'vuex'
 
 // Setup Axios
 // axios.defaults.withCredentials = true
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+// axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
 
 
 // Create a new store instance.

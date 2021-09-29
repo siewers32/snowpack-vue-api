@@ -11,16 +11,23 @@
 <script>
 import NavBar from "./components/NavBar"
 import {mapGetters} from 'vuex'
+import { onMounted } from 'vue'
+import store from './store'
 
 export default {
-  setup() {
-
+  setup () {
     onMounted(() => {
-      console.log('Component is mounted!')
+      console.log('mounted in the composition api!')
+      const userInfo = localStorage.getItem('user')
+      if (userInfo) {
+        const userData = JSON.parse(userInfo)
+        store.commit('setUserData', userData)
+      }
     })
   },
 
   name: "app",
+
   components: {
     NavBar
   },
@@ -32,8 +39,8 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('logout')
-    },
-  }
+    }
+  },
 }
 </script>
 
