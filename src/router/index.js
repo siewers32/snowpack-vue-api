@@ -3,15 +3,15 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     {
         path: "/",
-        name: "Home",
-        component: () =>
-            import("../views/HomePage.vue"),
-    },
-    {
-        path: "/login",
         name: "Login",
         component: () =>
             import("../views/LoginPage.vue"),
+    },
+    {
+        path: "/home",
+        name: "Home",
+        component: () =>
+            import("../views/HomePage.vue"),
     },
     {
         path: "/register",
@@ -20,10 +20,10 @@ const routes = [
             import("../views/RegisterPage.vue"),
     },
     {
-        path: "/test",
-        name: "Test",
+        path: "/show",
+        name: "Show",
         component: () =>
-            import("../views/TestPage.vue"),
+            import("../views/ShowPage.vue"),
     },
 ];
 

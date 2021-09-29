@@ -1,14 +1,14 @@
 <template>
   <h1>Hello from test</h1>
-  <get-request/>
+  <person-request/>
 </template>
 
 <script>
-import GetRequest from "../components/GetRequest";
+import PersonRequest from "../components/PersonRequest";
 export default {
-  name: "Test",
+  name: "Show",
   components: {
-    GetRequest,
+    PersonRequest,
   },
   methods: {
 

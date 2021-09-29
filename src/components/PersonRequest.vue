@@ -12,7 +12,7 @@
 <script>
 import axios from 'axios';
 export default {
-  name: "get-request",
+  name: "person-request",
   data() {
     return {
       persons: null
