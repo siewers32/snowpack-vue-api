@@ -9,27 +9,8 @@ import VueAxios from 'vue-axios'
 // axios.defaults.withCredentials = true
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
 
-const app = createApp(App, {
-    created () {
-        const userInfo = localStorage.getItem('user')
-        if (userInfo) {
-            const userData = JSON.parse(userInfo)
-            this.$store.commit('setUserData', userData)
-        }
-        axios.interceptors.response.use(
-            response => response,
-            error => {
-                if (error.response.status === 401) {
-                    this.$store.dispatch('logout')
-                }
-                return Promise.reject(error)
-            }
-        )
-    },
-    render: h => h(App)
-});
-
-app.use()
+const app = createApp(App)
+app.use(VueAxios, axios).use(router).use(store)
 
 
 app.mount('#app')

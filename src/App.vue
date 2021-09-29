@@ -13,6 +13,13 @@ import NavBar from "./components/NavBar"
 import {mapGetters} from 'vuex'
 
 export default {
+  setup() {
+
+    onMounted(() => {
+      console.log('Component is mounted!')
+    })
+  },
+
   name: "app",
   components: {
     NavBar
